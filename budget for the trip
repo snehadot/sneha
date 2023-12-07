@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() 
+{ int travel, food, stay;
+  float budget = 0;
+  
+  printf("Travel (1.Basic, 2. Moderate, 3. Luxurious): ");
+  scanf("%d", &travel);
+  budget = (travel == 1) ? 500.0 : (travel == 2) ? 1000.0 : 2000.0;
+
+  printf("Food (1.Basic, 2. Moderate, 3.Luxurious): ");
+  scanf("%d", &food);
+  budget += (food == 1) ? 7200.0 : (food == 2) ? 7500.0 : 10000.0;
+
+  printf("Stay (1.Basic, 2. Moderate, 3. Luxurious): ");
+  scanf("%d", &stay);
+  budget += (stay == 1) ?300.0 : (stay == 2) ?700.0 : 1500.0;
+
+  printf("\nTotal Budget: $%.2f\n", budget);
+  
+  return 0;
+}
