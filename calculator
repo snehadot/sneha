@@ -1,0 +1,3 @@
+#inclide<stdio.h>
+int main()
+int add,sub,div,mult;
