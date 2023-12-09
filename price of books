@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+struct book{
+
+char name[50];
+
+float price;
+
+int pages, i;
+
+};
+
+
+int main()
+{
+
+struct book books[25];
+
+printf("Enter names, price and number of pages of 25 books\n");
+
+for(int i=0;i<25;i++){
+
+printf("Book %d:\n",i+1);
+
+printf("Name: ");
+
+scanf("%s", books[i].name); 
+
+printf("Price: ");
+
+scanf("%f",&books[i].price);
+
+printf("No. of pages");
+
+scanf("%d",&books[i].pages);
+
+printf("And this is what you entered");}
+
+for(int i=0;i<25;i++){
+
+printf("Book %d: %s%f%d\n", i+1,books[i].name, books[i].price, books[i].pages);
+}
+return 0;
+}
