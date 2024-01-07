@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double temperature, windVelocity, windChillFactor;
+
+    
+    printf("Enter the temperature in Celsius: ");
+    scanf("%lf", &temperature);
+    
+    printf("Enter the wind velocity in meters per second: ");
+    scanf("%lf", &windVelocity);
+
+  
+    windChillFactor = 35.74 + 0.6215 * temperature +(0.4275 * temperature - 35.75) * pow(windVelocity, 0.16);
+
+    
+    printf("\nWind Chill Factor: %.2f\n", windChillFactor);
+
+    return 0;
+}
