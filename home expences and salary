@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() 
+{
+    float basic_salary, dearness_allowance, house_rent_allowance, gross_salary;
+
+    
+    printf("Enter Ramesh's basic salary: ");
+    scanf("%f", &basic_salary);
+
+    dearness_allowance = 0.4 * basic_salary;
+
+    
+    house_rent_allowance = 0.2 * basic_salary;
+
+    // Calculating gross salary by adding basic salary, dearness allowance, and house rent allowance
+    gross_salary = basic_salary + dearness_allowance + house_rent_allowance;
+
+    // Displaying the gross salary
+    printf("Ramesh's gross salary is: %.2f\n", gross_salary);
+
+    return 0;
+}
