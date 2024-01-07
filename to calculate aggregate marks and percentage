@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int marks[5];
+    int maxMarksPerSubject = 100;
+    int i;
+
+    // Input marks for five subjects
+    printf("Enter the marks obtained in five subjects:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Subject %d: ", i + 1);
+        scanf("%d", &marks[i]);
+
+        // Validate input marks
+        if (marks[i] < 0 || marks[i] > maxMarksPerSubject) {
+            printf("Invalid input! Marks should be between 0 and 100.\n");
+            return 1; // Exit with an error code
+        }
+    }
+
+    // Calculate aggregate marks and percentage
+    int aggregateMarks = 0;
+    for (i = 0; i < 5; i++) {
+        aggregateMarks += marks[i];
+    }
+
+    double percentage = (double)aggregateMarks / (5 * maxMarksPerSubject) * 100;
+
+    // Displaying results
+    printf("\nAggregate Marks: %d\n", aggregateMarks);
+    printf("Percentage Marks: %.2f%%\n", percentage);
+
+    return 0;
+}
+
