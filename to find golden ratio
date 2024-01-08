@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+// Function to calculate the golden ratio
+double calculateGoldenRatio(int n) {
+    if (n == 0) {
+        return 1.0;
+    } else {
+        return 1.0 + 1.0 / calculateGoldenRatio(n - 1);
+    }
+}
+
+int main() {
+    int n;
+
+    printf("Enter the number of iterations to approximate the golden ratio: ");
+    scanf("%d", &n);
+
+    // Calculate and print the golden ratio approximation
+    double goldenRatio = calculateGoldenRatio(n);
+    printf("Approximate Golden Ratio after %d iterations: %f\n", n, goldenRatio);
+
+    return 0;
+}
