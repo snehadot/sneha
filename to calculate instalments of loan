@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Get user input for loan amount, number of months, and rate of interest
+    double loanAmount, rateOfInterest;
+    int numberOfMonths;
+
+    printf("Enter Loan Amount: ");
+    scanf("%lf", &loanAmount);
+
+    printf("Enter Number of Months: ");
+    scanf("%d", &numberOfMonths);
+
+    printf("Enter Rate of Interest (in percentage): ");
+    scanf("%lf", &rateOfInterest);
+
+    // Convert rate of interest to decimal
+    rateOfInterest /= 100;
+
+    // Calculate monthly interest rate
+    double monthlyInterestRate = rateOfInterest / 12;
+
+    // Calculate monthly installment using the formula for EMI (Equated Monthly Installment)
+    double monthlyInstallment = (loanAmount * monthlyInterestRate) / (1 - pow(1 + monthlyInterestRate, -numberOfMonths));
+
+    // Display monthly installment for each month
+    printf("\nMonthly Installments:\n");
+
+    for (int month = 1; month <= numberOfMonths; month++) {
+        // Calculate interest for the current month
+        double interest = loanAmount * monthlyInterestRate;
+
+        // Calculate principal amount for the current month
+        double principal = monthlyInstallment - interest;
+
+        // Update the remaining loan amount
+        loanAmount -= principal;
+
+        // Display the details for the current month
+        printf("Month %d - Principal: %.2lf, Interest: %.2lf, Remaining Loan: %.2lf\n", month, principal, interest, loanAmount);
+    }
+
+    return 0;
+}
+
