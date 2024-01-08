@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    char inputChar;
+
+    // Input a character
+    printf("Enter a character: ");
+    scanf("%c", &inputChar);
+
+    // Check if the character is a special symbol
+    if ((inputChar >= 33 && inputChar <= 47) ||
+        (inputChar >= 58 && inputChar <= 64) ||
+        (inputChar >= 91 && inputChar <= 96) ||
+        (inputChar >= 123 && inputChar <= 126)) {
+        printf("%c is a special symbol.\n", inputChar);
+    } else {
+        printf("%c is not a special symbol.\n", inputChar);
+    }
+
+    return 0;
+}
