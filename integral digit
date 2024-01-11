@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+// Function to display digits of a number
+void displayDigits(int num) {
+    while (num != 0) {
+        printf("%d ", num % 10);
+        num /= 10;
+    }
+}
+
+int main() {
+    int number;
+    
+    // Read an integer value
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    // Display digits using the function
+    printf("Digits of %d are: ", number);
+    displayDigits(number);
+
+    return 0;
+}
