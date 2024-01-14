@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void printRightAngledTriangle(int n) {
+    // Loop to iterate through each row
+    for (int i = 0; i < n; i++) {
+        // Loop to print stars
+        for (int j = 0; j <= i; j++) {
+            printf("* ");
+        }
+        // Move to the next line after printing each row
+        printf("\n");
+    }
+}
+
+int main() {
+    int n;
+
+    // Input the number of rows for the right-angled triangle
+    printf("Enter the number of rows for the right-angled triangle: ");
+    scanf("%d", &n);
+
+    // Check if the number of rows is positive
+    if (n <= 0) {
+        printf("Please enter a positive number of rows.\n");
+        return 1;
+    }
+
+    // Print the right-angled triangle
+    printRightAngledTriangle(n);
+
+    return 0;
+}
