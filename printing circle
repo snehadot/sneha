@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <math.h>
+
+void printCircle(int radius) {
+    // Loop to iterate through each row
+    for (int i = 0; i <= 2 * radius; i++) {
+        // Loop to iterate through each column
+        for (int j = 0; j <= 2 * radius; j++) {
+            // Distance between the current point and the center
+            float distance = sqrt((i - radius) * (i - radius) + (j - radius) * (j - radius));
+            
+            // If the distance is very close to the radius, print a star
+            if (fabs(distance - radius) < 0.5) {
+                printf("* ");
+            } else {
+                // Print a space if the point is outside the circle
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int radius;
+
+    // Input the radius of the circle
+    printf("Enter the radius of the circle: ");
+    scanf("%d", &radius);
+
+    // Check if the radius is positive
+    if (radius <= 0) {
+        printf("Please enter a positive radius.\n");
+        return 1;
+    }
+
+    // Print the circle
+    printCircle(radius);
+
+    return 0;
+}
