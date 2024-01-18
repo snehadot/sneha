@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <time.h>
+
+
+int calculateAge(int birthYear) {
+
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    int currentYear = tm.tm_year + 1900;
+
+    int age = currentYear - birthYear;
+
+    return age;
+}
+
+int main() {
+    int birthYear;
+
+
+    printf("Enter your birth year: ");
+    scanf("%d", &birthYear);
+
+    int age = calculateAge(birthYear);
+    printf("Your age is: %d\n", age);
+
+    return 0;
+}
