@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+
+int calculateCutoff(int score, char category) {
+    int cutoff = 0;
+
+    switch (category) {
+        case 'G':
+            cutoff = 99;
+            break;
+        case 'O':
+            cutoff = 97;
+            break;
+        case 'SC':
+            cutoff = 60;
+            break;
+        case 'ST':
+            cutoff = 55;
+            break;
+        default:
+            printf("Invalid category!\n");
+            break;
+    }
+
+    return cutoff;
+}
+
+int main() {
+    int entranceScore;
+    char category;
+
+    printf("Enter entrance exam score: ");
+    scanf("%d", &entranceScore);
+
+printf("Enter category (G for General, O for OBC, SC for Scheduled Caste, ST for Scheduled Tribe): ");
+    scanf("%s", &category);
+
+    int cutoff = calculateCutoff(entranceScore, category);
+
+
+    if (cutoff > 0) {
+        printf("The cutoff for category %c is: %d\n", category, cutoff);
+
+        if (entranceScore >= cutoff) {
+            printf("Congratulations! You have qualified.\n");
+        } else {
+            printf("Sorry, you did not meet the cutoff.\n");
+        }
+    }
+
+    return 0;
+}
