@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+#define MAX_STUDENTS 50
+void assignMarks(int rollNumbers[], int marks[], int numStudents) {
+    for (int i = 0; i < numStudents; i++) {
+        printf("Enter marks for student with roll number %d: ", rollNumbers[i]);
+        scanf("%d", &marks[i]);   }
+}
+void displayMarks(int rollNumbers[], int marks[], int numStudents) {
+    printf("\nStudent Performance:\n");
+    for (int i = 0; i < numStudents; i++) {
+        printf("Roll Number: %d, Marks: %d\n", rollNumbers[i], marks[i]);
+    }
+}
+
+int main() {
+    int rollNumbers[MAX_STUDENTS];
+    int marks[MAX_STUDENTS];
+    int numStudents;
+
+    printf("Enter the number of students: ");
+    scanf("%d", &numStudents);
+
+    for (int i = 0; i < numStudents; i++) {
+        printf("Enter roll number for student %d: ", i + 1);
+        scanf("%d", &rollNumbers[i]);
+    }
+    assignMarks(rollNumbers, marks, numStudents);
+
+    displayMarks(rollNumbers, marks, numStudents);
+    return 0;
+}
