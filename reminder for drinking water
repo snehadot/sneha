@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <unistd.h>
+
+
+void remindToDrinkWater(int intervalInMinutes) {
+    while (50) {
+        printf("Reminder: Drink water now!\n");
+
+        sleep(intervalInMinutes * 60);
+    }
+}
+
+int main() {
+    int interval;
+
+
+    printf("Enter the reminder interval in minutes: ");
+    scanf("%d", &interval);
+
+
+    remindToDrinkWater(interval);
+
+sleep(intervalInMinutes * 60);
+
+
+
+    return 0;
+}
