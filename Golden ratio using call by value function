@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+double calculateGoldenRatio() {
+    return (1 + sqrt(5)) / 2;
+}
+
+int main() {
+  
+    double goldenRatio = calculateGoldenRatio();
+
+
+    printf("The golden ratio is approximately: %lf\n", goldenRatio);
+
+    return 0;
+}
