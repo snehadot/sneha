@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverseWord(char *word) {
+    int length = strlen(word);
+    for (int i = 0; i < length / 2; i++) {
+        char temp = word[i];
+        word[i] = word[length - i - 1];
+        word[length - i - 1] = temp;
+    }
+}
+
+int main() {
+    char word[100];
+    printf("Enter a word: ");
+    scanf("%s", word);
+    
+    reverseWord(word);
+    
+    printf("Reversed word: %s\n", word);
+    
+    return 0;
+}
