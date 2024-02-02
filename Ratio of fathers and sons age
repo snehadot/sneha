@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int father_age, son_age;
+    float ratio;
+
+    printf("Enter father's age: ");
+    scanf("%d", &father_age);
+
+    printf("Enter son's age: ");
+    scanf("%d", &son_age);
+
+    if (son_age == 0) {
+        printf("Error: Son's age cannot be zero.\n");
+        return 1; // Exit the program with an error code
+    }
+    ratio = (float)father_age / son_age;
+    printf("The ratio of father's age to son's age is: %.2f\n", ratio);
+
+    return 0;
+}
