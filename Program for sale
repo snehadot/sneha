@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    float originalPrice, discountedPrice;
+    printf("Enter the original price: ");
+    scanf("%f", &originalPrice);
+    
+    discountedPrice = originalPrice * 0.5; // 50% discount
+    
+    printf("Discounted price: %.2f\n", discountedPrice);
+    
+    return 0;
+}
