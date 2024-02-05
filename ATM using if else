@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    float balance = 10000.0;
+    int choice;
+    float amount;
+
+    printf("Welcome to the ATM\n");
+    printf("1. Check Balance\n");
+    printf("2. Withdraw Money\n");
+    printf("3. Deposit Money\n");
+    printf("4. Exit\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        printf("Your balance is: $%.2f\n", balance);
+    } else if (choice == 2) {
+        printf("Enter the amount to withdraw: ");
+        scanf("%f", &amount);
+        if (amount > balance) {
+            printf("Insufficient funds\n");
+        } else {
+            balance -= amount;
+            printf("Withdrawal successful. Remaining balance is: $%.2f\n", balance);
+        }
+    } else if (choice == 3) {
+        printf("Enter the amount to deposit: ");
+        scanf("%f", &amount);
+        balance += amount;
+        printf("Deposit successful. Updated balance is: $%.2f\n", balance);
+    } else if (choice == 4) {
+        printf("Thank you for using the ATM\n");
+    } else {
+        printf("Invalid choice\n");
+    }
+
+    return 0;
+}
