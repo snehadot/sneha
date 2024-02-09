@@ -1,0 +1,4 @@
+Name = sneha
+Age = 19
+print(f"My name is :{Name}) 
+print(f" My age is :{Age}) 
