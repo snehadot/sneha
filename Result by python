@@ -1,0 +1,5 @@
+   A= int(input("enter your marks") 
+if A>40 :
+    print (" you are pass") 
+else :
+    print(f"you are fail") 
