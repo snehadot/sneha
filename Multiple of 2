@@ -1,0 +1,6 @@
+def multiples_of_2(limit):
+    for i in range(1, limit + 1):
+        print(2 * i)
+
+limit = int(input("Enter the limit: "))
+multiples_of_2(limit)
