@@ -1,0 +1,5 @@
+# Define the name variable
+name = "John Doe"
+
+# Print the name
+print("My name is", name)
