@@ -1,0 +1,13 @@
+m = float(input("Enter the mass"))
+
+v = float(input("Enter the Velocity"))
+
+if m> and <>0:
+
+p = mv
+
+print(f"The Momentum of body is {p}")
+
+else:
+
+print("Error")
