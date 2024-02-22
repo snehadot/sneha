@@ -1,0 +1,21 @@
+read the birth date and salary in rupees of employees.
+
+performdata transformation for birthdate to age and also alary to dollars using function
+
+year int(input("enter birth year"))
+
+def age (year):
+
+current age-2024 year print( current age)
+
+salary float(input("enter your salary in rupees"))
+
+def s(salary):
+
+salary-salary/se
+
+print(salary)
+
+age(year)
+
+s(salary)
