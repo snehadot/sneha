@@ -1,0 +1,7 @@
+
+n=int(input("enter no"))
+f=0
+while f<=10:
+    a=n*f
+    print(a)
+    f+=1
