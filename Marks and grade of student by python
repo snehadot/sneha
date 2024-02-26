@@ -1,0 +1,17 @@
+a=int(input("enter marks of 1st subject"))
+b=int(input("enter marks of 2nd subject"))
+c=int(input("enter marks of 3rd subject"))
+d=int(input("enter marks of 4st subject"))
+e=int(input("enter marks of 5st subject"))
+f=((a+b+c+d+e)/500)*100
+if a>=40 and b>=40 and c>=40 and d>=40 and e>=40:
+    if (f>75):
+        print(ur in distiction)
+    elif(f>=60 and f<75): 
+        print(ur in first division)
+    elif(f>=50 and f<60): 
+        print(ur in second division)
+    elif(f>=40 and f<50) :
+        print(ur in third division)
+else:
+    print("ur fail")
