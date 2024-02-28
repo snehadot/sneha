@@ -1,0 +1,4 @@
+mass=int(input("enter mass in kg"))
+velocity=int(input("enter velocity in meter"))
+e=mass*velocity*velocity
+print(e)
