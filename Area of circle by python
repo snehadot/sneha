@@ -1,0 +1,9 @@
+import math
+
+def area_of_circle(radius):
+    area = math.pi * radius**2
+    return area
+
+# Example usage:
+radius = 5
+print("The area of the circle with radius", radius, "is:", area_of_circle(radius))
