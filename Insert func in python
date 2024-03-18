@@ -1,0 +1,3 @@
+color=["blue","red","black","pink"]
+a. insert(2,"green") 
+print (a) 
